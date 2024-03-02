@@ -16,6 +16,7 @@
 		889B5EB32B932E7B00DE96AD /* UpcomingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B5EB22B932E7B00DE96AD /* UpcomingVC.swift */; };
 		889B5EB52B932E9700DE96AD /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B5EB42B932E9700DE96AD /* SearchVC.swift */; };
 		889B5EB72B932EB300DE96AD /* DownloadsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B5EB62B932EB300DE96AD /* DownloadsVC.swift */; };
+		889B5EBE2B93340100DE96AD /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B5EBD2B93340100DE96AD /* CollectionViewTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		889B5EB22B932E7B00DE96AD /* UpcomingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingVC.swift; sourceTree = "<group>"; };
 		889B5EB42B932E9700DE96AD /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		889B5EB62B932EB300DE96AD /* DownloadsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsVC.swift; sourceTree = "<group>"; };
+		889B5EBD2B93340100DE96AD /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,11 @@
 		889B5E9A2B93272E00DE96AD /* Movio */ = {
 			isa = PBXGroup;
 			children = (
+				889B5EBC2B9333BD00DE96AD /* Managers */,
+				889B5EBB2B9333B500DE96AD /* Resources */,
+				889B5EBA2B93339300DE96AD /* Models */,
+				889B5EB82B93338200DE96AD /* Views */,
+				889B5EB92B93338A00DE96AD /* ViewModels */,
 				889B5EAF2B932E1300DE96AD /* Controllers */,
 				889B5E9B2B93272E00DE96AD /* AppDelegate.swift */,
 				889B5E9D2B93272E00DE96AD /* SceneDelegate.swift */,
@@ -82,6 +89,42 @@
 				889B5EB62B932EB300DE96AD /* DownloadsVC.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		889B5EB82B93338200DE96AD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				889B5EBD2B93340100DE96AD /* CollectionViewTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		889B5EB92B93338A00DE96AD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		889B5EBA2B93339300DE96AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		889B5EBB2B9333B500DE96AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		889B5EBC2B9333BD00DE96AD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +199,7 @@
 			files = (
 				889B5EB52B932E9700DE96AD /* SearchVC.swift in Sources */,
 				889B5EA02B93272E00DE96AD /* MainTabBarVC.swift in Sources */,
+				889B5EBE2B93340100DE96AD /* CollectionViewTableViewCell.swift in Sources */,
 				889B5EB12B932E5100DE96AD /* HomeVC.swift in Sources */,
 				889B5E9C2B93272E00DE96AD /* AppDelegate.swift in Sources */,
 				889B5EB72B932EB300DE96AD /* DownloadsVC.swift in Sources */,
