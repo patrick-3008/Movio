@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883699762B94ED96001390F6 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883699752B94ED96001390F6 /* HeroHeaderUIView.swift */; };
 		889B5E9C2B93272E00DE96AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B5E9B2B93272E00DE96AD /* AppDelegate.swift */; };
 		889B5E9E2B93272E00DE96AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B5E9D2B93272E00DE96AD /* SceneDelegate.swift */; };
 		889B5EA02B93272E00DE96AD /* MainTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B5E9F2B93272E00DE96AD /* MainTabBarVC.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		883699752B94ED96001390F6 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		889B5E982B93272E00DE96AD /* Movio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889B5E9B2B93272E00DE96AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889B5E9D2B93272E00DE96AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				889B5EBD2B93340100DE96AD /* CollectionViewTableViewCell.swift */,
+				883699752B94ED96001390F6 /* HeroHeaderUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				889B5EB52B932E9700DE96AD /* SearchVC.swift in Sources */,
 				889B5EA02B93272E00DE96AD /* MainTabBarVC.swift in Sources */,
 				889B5EBE2B93340100DE96AD /* CollectionViewTableViewCell.swift in Sources */,
+				883699762B94ED96001390F6 /* HeroHeaderUIView.swift in Sources */,
 				889B5EB12B932E5100DE96AD /* HomeVC.swift in Sources */,
 				889B5E9C2B93272E00DE96AD /* AppDelegate.swift in Sources */,
 				889B5EB72B932EB300DE96AD /* DownloadsVC.swift in Sources */,
