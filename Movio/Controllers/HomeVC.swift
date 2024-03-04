@@ -62,8 +62,6 @@ class HomeVC: UIViewController {
 //            }
 //            
 //        }
-        
-        
     }
     
 }
