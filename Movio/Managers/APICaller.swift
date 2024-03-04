@@ -8,14 +8,18 @@
 import Foundation
 
 struct Constants {
-    static let API_KEY = "4c3e8e1a17ca8b7de9acdbbcb3ae0111"
+    static let API_KEY = "697d439ac993538da4e3e60b54e762cd"
     static let baseURL = "https://api.themoviedb.org"
+}
+
+enum APIError: Error {
+    case failedToGetData
 }
 
 class APICaller {
     static let shared = APICaller()
     
-    func getTerndingMovies(completion: @escaping (String) -> Void) {
+    func getTerndingMovies(completion: @escaping (Result<[Movie], Error>) -> Void) {
         guard let url = URL(string: "\(Constants.baseURL)/3/trending/movie/day?api_key=\(Constants.API_KEY)") else {return}
         
         let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
@@ -23,8 +27,9 @@ class APICaller {
             
             do {
                 let results = try JSONDecoder().decode(TrendingMoviesResponse.self, from: data)
+                completion(.success(results.results))
             } catch {
-                print(error.localizedDescription)
+                completion(.failure(error))
             }
         }
         
