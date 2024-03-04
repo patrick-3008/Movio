@@ -31,7 +31,7 @@ class HomeVC: UIViewController {
         let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
-        getTrendingMovies()
+        fetchData()
     }
     
     private func configureNavBar() {
@@ -52,16 +52,18 @@ class HomeVC: UIViewController {
         homeFeedTable.frame = view.bounds
     }
     
-    private func getTrendingMovies () {
-        APICaller.shared.getTerndingMovies { results in
-            switch results {
-                case . success(let movies):
-                    print(movies)
-                case .failure(let error):
-                    print(error)
-            }
-            
-        }
+    private func fetchData () {
+//        APICaller.shared.getTerndingMovies { results in
+//            switch results {
+//                case . success(let movies):
+//                    print(movies)
+//                case .failure(let error):
+//                    print(error)
+//            }
+//            
+//        }
+        
+        
     }
     
 }
