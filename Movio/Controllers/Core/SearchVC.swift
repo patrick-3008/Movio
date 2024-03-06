@@ -58,7 +58,7 @@ class SearchVC: UIViewController {
                         self?.discoverTable.reloadData()
                     }
                 case .failure(let error):
-                    print(error.localizedDescription)
+                    print("error in fetchDiscoverMovies method \(error.localizedDescription)")
             }
         }
     }
@@ -86,6 +86,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+// MARK: - search results
 extension SearchVC: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
@@ -103,7 +104,7 @@ extension SearchVC: UISearchResultsUpdating {
                         resultsController.searchResultsCollectionView.reloadData()
                         
                     case.failure(let error):
-                        print(error.localizedDescription)
+                        print("error in search results \(error.localizedDescription)")
                 }
             }
         }
