@@ -36,10 +36,16 @@ class TitlePreviewVC: UIViewController {
         return button
     }()
     
-    private let webView: WKWebView = WKWebView()
+    private let webView: WKWebView = {
+        let webView = WKWebView()
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        return webView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = .systemBackground
         
         view.addSubview(webView)
         view.addSubview(titleLabel)
