@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		881A4A022B9A2836000D760A /* YoutubeSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A4A012B9A2836000D760A /* YoutubeSearchResponse.swift */; };
+		881A4A062B9A2DF5000D760A /* TitlePreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881A4A052B9A2DF5000D760A /* TitlePreviewVC.swift */; };
 		883699762B94ED96001390F6 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883699752B94ED96001390F6 /* HeroHeaderUIView.swift */; };
 		8836D1892B95EA9800B5440A /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836D1882B95EA9800B5440A /* APICaller.swift */; };
 		8836D18B2B95EEA000B5440A /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8836D18A2B95EEA000B5440A /* Title.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		881A4A012B9A2836000D760A /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
+		881A4A052B9A2DF5000D760A /* TitlePreviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewVC.swift; sourceTree = "<group>"; };
 		883699752B94ED96001390F6 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		8836D1882B95EA9800B5440A /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		8836D18A2B95EEA000B5440A /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				887CEDEE2B99124300DF4CD4 /* SearchResultsVC.swift */,
+				881A4A052B9A2DF5000D760A /* TitlePreviewVC.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				889B5E9C2B93272E00DE96AD /* AppDelegate.swift in Sources */,
 				8836D18D2B95F35300B5440A /* Extensions.swift in Sources */,
 				881A4A022B9A2836000D760A /* YoutubeSearchResponse.swift in Sources */,
+				881A4A062B9A2DF5000D760A /* TitlePreviewVC.swift in Sources */,
 				889B5EB72B932EB300DE96AD /* DownloadsVC.swift in Sources */,
 				889B5EB32B932E7B00DE96AD /* UpcomingVC.swift in Sources */,
 				8836D18B2B95EEA000B5440A /* Title.swift in Sources */,
