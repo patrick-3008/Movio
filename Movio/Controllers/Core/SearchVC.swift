@@ -53,7 +53,7 @@ class SearchVC: UIViewController {
     
     func fetchDiscoverMovies() {
         
-        APICaller.shared.getPopular { [weak self] result in
+        APICaller.shared.getTitles(for: APIType.getPopular, completion: { [weak self] result in
             switch result {
                 case .success(let titles):
                     self?.titles = titles
@@ -63,7 +63,7 @@ class SearchVC: UIViewController {
                 case .failure(let error):
                     print("error in fetchDiscoverMovies method \(error.localizedDescription)")
             }
-        }
+        })
     }
     
 }
@@ -77,6 +77,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath) as? TitleTableViewCell else { return UITableViewCell() }
         
         let title = titles[indexPath.row]
@@ -97,7 +98,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
         
         guard let titleName = title.original_title ?? title.original_name else { return }
         
-        APICaller.shared.getMovie(with: titleName) { [weak self] result in
+        APICaller.shared.getMovieTrailer(with: titleName) { [weak self] result in
             switch result {
                 case .success(let videoElement):
                     
@@ -130,7 +131,7 @@ extension SearchVC: UISearchResultsUpdating, SearchResultsVCDelegate {
         
         resultsController.delegate = self
         
-        APICaller.shared.search(with: query) { result in
+        APICaller.shared.searchForMovie(with: query) { result in
             DispatchQueue.main.async {
                 switch result {
                     case .success(let titles):

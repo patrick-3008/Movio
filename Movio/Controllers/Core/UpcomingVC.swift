@@ -14,6 +14,7 @@ class UpcomingVC: UIViewController {
     private let upcomingTable: UITableView = {
         let table = UITableView()
         table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        
         return table
     }()
     
@@ -39,7 +40,7 @@ class UpcomingVC: UIViewController {
     
     private func fetchUpcoming() {
         
-        APICaller.shared.getUpcomingMovies { [weak self] result in
+        APICaller.shared.getTitles(for: APIType.getUpcomingMovies, completion: { [weak self] result in
             switch result {
                 case .success(let titles):
                     self?.titles = titles
@@ -49,7 +50,7 @@ class UpcomingVC: UIViewController {
                 case .failure(let error):
                     print(error.localizedDescription)
             }
-        }
+        })
     }
     
 }
@@ -62,10 +63,12 @@ extension UpcomingVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath) as? TitleTableViewCell else { return UITableViewCell() }
         
         let title = titles[indexPath.row]
         cell.configure(with: TitleViewModel(titleName: title.original_title ?? title.original_name ?? "Unknown Title Name", posterURL: title.poster_path ?? ""))
+        
         return cell
     }
     
@@ -80,7 +83,7 @@ extension UpcomingVC: UITableViewDelegate, UITableViewDataSource {
         
         guard let titleName = title.original_title ?? title.original_name else { return }
         
-        APICaller.shared.getMovie(with: titleName) { [weak self] result in
+        APICaller.shared.getMovieTrailer(with: titleName) { [weak self] result in
             switch result {
                 case .success(let videoElement):
                     

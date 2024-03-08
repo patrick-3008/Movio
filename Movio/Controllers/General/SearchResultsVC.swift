@@ -68,7 +68,7 @@ extension SearchResultsVC: UICollectionViewDelegate, UICollectionViewDataSource 
         let title = titles[indexPath.row]
         let titleName = title.original_title ?? ""
         
-        APICaller.shared.getMovie(with: titleName) { [weak self] result in
+        APICaller.shared.getMovieTrailer(with: titleName) { [weak self] result in
             switch result {
                 case .success(let videoElement):
                     self?.delegate?.searchResultsVCDidTapItem(TitlePreviewViewModel(title: title.original_title ?? "", youtubeView: videoElement, titleOverview: title.overview ?? ""))

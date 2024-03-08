@@ -110,7 +110,7 @@ extension DownloadsVC: UITableViewDelegate, UITableViewDataSource {
         
         guard let titleName = title.original_title ?? title.original_name else { return }
         
-        APICaller.shared.getMovie(with: titleName) { [weak self] result in
+        APICaller.shared.getMovieTrailer(with: titleName) { [weak self] result in
             switch result {
                 case .success(let videoElement):
                     
