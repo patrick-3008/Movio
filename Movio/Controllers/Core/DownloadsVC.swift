@@ -10,16 +10,16 @@ import UIKit
 class DownloadsVC: UIViewController {
     
     private var titles: [TitleItem] = [TitleItem]()
-
-        private let downloadedTable: UITableView = {
+    
+    private let downloadedTable: UITableView = {
         let table = UITableView()
         table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
         return table
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .systemBackground
         title = "Downloads"
         view.addSubview(downloadedTable)
@@ -31,7 +31,7 @@ class DownloadsVC: UIViewController {
         
         fetchLocalStorageForDownload()
     }
-
+    
     private func fetchLocalStorageForDownload() {
         DataPersistenceManager.shared.fetchingTitlesFromDataBase { [weak self] result in
             switch result {
@@ -54,6 +54,8 @@ class DownloadsVC: UIViewController {
     
 }
 
+// MARK: - for tables
+
 extension DownloadsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -70,6 +72,27 @@ extension DownloadsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        switch editingStyle {
+                
+            case .delete:
+                DataPersistenceManager.shared.deleteTitleWith(model: titles[indexPath.row]) { [weak self] result in
+                    switch result {
+                        case .success():
+                            print("Deleted from the database")
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                    }
+                    self?.titles.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+                
+            default:
+                break
+        }
     }
     
 }
