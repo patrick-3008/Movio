@@ -21,15 +21,3 @@ struct IdVideoElement: Codable {
     let kind: String
     let videoId: String
 }
-
-/*
- items =     (
-             {
-         etag = "hRDnezx4LRSTgVpV-pRPp6iUe5o";
-         id =             {
-             channelId = "UChPRO1CB_Hvd0TvKRU62iSQ";
-             kind = "youtube#channel";
-         };
-         kind = "youtube#searchResult";
-     },
- */

@@ -14,6 +14,7 @@ class DownloadsVC: UIViewController {
     private let downloadedTable: UITableView = {
         let table = UITableView()
         table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        
         return table
     }()
     
@@ -37,6 +38,7 @@ class DownloadsVC: UIViewController {
     }
     
     private func fetchLocalStorageForDownload() {
+        
         DataPersistenceManager.shared.fetchingTitlesFromDataBase { [weak self] result in
             switch result {
                 case .success(let titles):
@@ -67,6 +69,7 @@ extension DownloadsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TitleTableViewCell.identifier, for: indexPath) as? TitleTableViewCell else { return UITableViewCell() }
         
         let title = titles[indexPath.row]
@@ -100,6 +103,7 @@ extension DownloadsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         tableView.deselectRow(at: indexPath, animated: true)
         
         let title = titles[indexPath.row]

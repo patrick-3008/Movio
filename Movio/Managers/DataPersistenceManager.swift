@@ -54,7 +54,7 @@ class DataPersistenceManager {
         request = TitleItem.fetchRequest()
         
         do {
-           let titles = try context.fetch(request)
+            let titles = try context.fetch(request)
             completion(.success(titles))
         } catch {
             print(error.localizedDescription)

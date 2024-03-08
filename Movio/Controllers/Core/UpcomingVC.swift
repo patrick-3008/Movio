@@ -38,6 +38,7 @@ class UpcomingVC: UIViewController {
     }
     
     private func fetchUpcoming() {
+        
         APICaller.shared.getUpcomingMovies { [weak self] result in
             switch result {
                 case .success(let titles):
@@ -73,8 +74,8 @@ extension UpcomingVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
         
+        tableView.deselectRow(at: indexPath, animated: true)
         let title = titles[indexPath.row]
         
         guard let titleName = title.original_title ?? title.original_name else { return }

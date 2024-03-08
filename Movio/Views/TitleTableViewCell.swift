@@ -8,7 +8,7 @@
 import UIKit
 
 class TitleTableViewCell: UITableViewCell {
-
+    
     static let identifier = "TitleTableViewCell"
     
     private let playTitleButton: UIButton = {
@@ -17,12 +17,14 @@ class TitleTableViewCell: UITableViewCell {
         button.setImage(image, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = .white
+        
         return button
     }()
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        
         return label
     }()
     
@@ -31,6 +33,7 @@ class TitleTableViewCell: UITableViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
+        
         return imageView
     }()
     
@@ -76,5 +79,5 @@ class TitleTableViewCell: UITableViewCell {
         titlesPosterUIImageView.sd_setImage(with: url, completed: nil)
         titleLabel.text = model.titleName
     }
-
+    
 }

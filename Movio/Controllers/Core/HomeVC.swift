@@ -46,6 +46,7 @@ class HomeVC: UIViewController {
     }
     
     private func configureHeroHeaderView() {
+        
         APICaller.shared.getTerndingMovies { [weak self] result in
             switch result {
                 case .success(let titles):
@@ -61,6 +62,7 @@ class HomeVC: UIViewController {
     }
     
     private func configureNavBar() {
+        
         var image = UIImage(named: "appLogo")
         image = image?.withRenderingMode(.alwaysOriginal)
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: image, style: .done, target: self, action: nil)
@@ -74,7 +76,6 @@ class HomeVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
         homeFeedTable.frame = view.bounds
     }
     
@@ -94,6 +95,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else {
             return UITableViewCell()
         }
@@ -166,6 +168,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
         guard let header = view as? UITableViewHeaderFooterView else {return}
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)

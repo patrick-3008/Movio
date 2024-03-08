@@ -15,6 +15,7 @@ class TitlePreviewVC: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = .systemFont(ofSize: 22, weight: .bold)
         label.text = "Harry Potter"
+        
         return label
     }()
     
@@ -24,6 +25,7 @@ class TitlePreviewVC: UIViewController {
         label.font = .systemFont(ofSize: 18, weight: .regular)
         label.numberOfLines = 0
         label.text = "This is the best movie ever to watch as a kid!"
+        
         return label
     }()
     
@@ -35,6 +37,7 @@ class TitlePreviewVC: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 8
         button.layer.masksToBounds = true
+        
         return button
     }()
     
@@ -91,6 +94,7 @@ class TitlePreviewVC: UIViewController {
     }
     
     func configure(with model: TitlePreviewViewModel) {
+        
         titleLabel.text = model.title
         overviewLabel.text = model.titleOverview
         

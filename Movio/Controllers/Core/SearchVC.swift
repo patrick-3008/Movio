@@ -14,6 +14,7 @@ class SearchVC: UIViewController {
     private let discoverTable: UITableView = {
         let table = UITableView()
         table.register(TitleTableViewCell.self, forCellReuseIdentifier: TitleTableViewCell.identifier)
+        
         return table
     }()
     
@@ -21,6 +22,7 @@ class SearchVC: UIViewController {
         let controller = UISearchController(searchResultsController: SearchResultsVC())
         controller.searchBar.placeholder = "Search for a Movie or a Tv show"
         controller.searchBar.searchBarStyle = .minimal
+        
         return controller
     }()
     
@@ -50,6 +52,7 @@ class SearchVC: UIViewController {
     }
     
     func fetchDiscoverMovies() {
+        
         APICaller.shared.getPopular { [weak self] result in
             switch result {
                 case .success(let titles):
@@ -66,7 +69,9 @@ class SearchVC: UIViewController {
 }
 
 // MARK: - for tables
+
 extension SearchVC: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titles.count
     }
@@ -112,6 +117,7 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - search results
+
 extension SearchVC: UISearchResultsUpdating, SearchResultsVCDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {

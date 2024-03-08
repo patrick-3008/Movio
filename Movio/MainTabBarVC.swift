@@ -8,7 +8,7 @@
 import UIKit
 
 class MainTabBarVC: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,5 +32,5 @@ class MainTabBarVC: UITabBarController {
         
         setViewControllers([vc1, vc2, vc3, vc4], animated: true)
     }
-
+    
 }

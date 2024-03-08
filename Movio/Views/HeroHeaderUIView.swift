@@ -16,6 +16,7 @@ class HeroHeaderUIView: UIView {
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 5
+        
         return button
     }()
     
@@ -26,6 +27,7 @@ class HeroHeaderUIView: UIView {
         button.layer.borderWidth = 1
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 5
+        
         return button
     }()
     
@@ -45,6 +47,7 @@ class HeroHeaderUIView: UIView {
         addGradient()
         addSubview(playButton)
         addSubview(downloadButton)
+        
         applyConstraints()
     }
     
@@ -86,7 +89,7 @@ class HeroHeaderUIView: UIView {
     
     public func configure(with model: TitleViewModel) {
         guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model.posterURL)") else { return }
-
+        
         heroImageView.sd_setImage(with: url, completed: nil)
     }
     
