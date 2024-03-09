@@ -68,7 +68,7 @@ Movio is an application designed to provide users with an immersive experience i
 <p>Upon launching the Movio app, you will be greeted with a visually stunning interface showcasing trending movies and TV shows. Use the tabs at the bottom to navigate between different categories such as "Trending", "Popular", "Upcoming", and "Top Rated".</p>
 <p>To search for a specific movie or TV show, simply tap on the search icon and enter your query. Movio will provide you with relevant results in real-time.</p>
 <p>To download a movie or TV show for offline viewing, navigate to the desired content and tap on the download icon. Feel the satisfying haptic feedback as the download begins.</p>
-<p>Enjoy exploring the world of entertainment with Movio!</p>M
+<p>Enjoy exploring the world of entertainment with Movio!</p>
 
 <h2>Feedback</h2>
 
