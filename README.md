@@ -5,6 +5,8 @@ Movio is an application designed to provide users with an immersive experience i
 # Screenshots
 <img src = "https://github.com/patrick-3008/Movio/assets/121394398/8d1674c2-d09b-4787-8106-2490c139ae74" width = "200">
 <img src = "https://github.com/patrick-3008/Movio/assets/121394398/9b6f9154-b6d3-4c6c-b6e1-07febfab9129" width = "200">
+<img src = "https://github.com/patrick-3008/Movio/assets/121394398/2f5c0ad6-d171-45e6-a68b-5dd6a6c2ede9" width = "200">
+<img src = "https://github.com/patrick-3008/Movio/assets/121394398/6ec3f84d-825c-467a-9028-6ce4a4b4530d" width = "200">
 <img src = "https://github.com/patrick-3008/Movio/assets/121394398/d6577903-6917-4b9f-9479-6f66cd0de5c9" width = "200">
 <img src = "https://github.com/patrick-3008/Movio/assets/121394398/477b6c55-742b-4376-ada5-78278d20a882" width = "200">
 <img src = "https://github.com/patrick-3008/Movio/assets/121394398/f43c762e-e6c9-4433-9229-619bc03b9642" width = "200">
